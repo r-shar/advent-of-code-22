@@ -76,7 +76,6 @@ return str
 '''
 # part 1
 # def find_top_of_stacks(stacks, moves):
-#     print(stacks)
 #     tops = []
 #     while moves:
 #         instruction = moves.popleft()
@@ -97,7 +96,6 @@ return str
 
 # part 2
 def find_top_of_stacks(stacks, moves):
-    print(stacks)
     tops = []
     while moves:
         instruction = moves.popleft()
@@ -112,6 +110,7 @@ def find_top_of_stacks(stacks, moves):
             num_crates -= 1
         while popped_crates:
             stacks[to_column].append(popped_crates.pop())
+
     for _, stack in stacks.items():
         tops.append(stack[-1])
 
