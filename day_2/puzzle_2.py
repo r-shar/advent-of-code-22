@@ -19,8 +19,8 @@ CX, BZ, AY
 '''
 # part 1 (assuming gameplay follows guide)
 def calculate_total_score(file):
-    sum_moves = 0 # 2/3/6
-    sum_outcomes = 0 # 6/9
+    sum_moves = 0
+    sum_outcomes = 0
 
     move_mapping = {"X": "A", "Y":"B", "Z":"C"}
     moves = {"X": 1, "Y":2, "Z":3}
@@ -63,19 +63,6 @@ def calculate_score_2(file):
             l = (line.strip()).replace(" ", "")
             # based on needed outcome for round,
             # determine move, and add points
-            # match l[1]:
-            #     case "X":
-            #         move_to_lose = you_lose[l[0]]
-            #         sum_moves += points(move_to_lose)
-            #         sum_outcomes += outcome_points[l[1]]
-            #     case "Y":
-            #         sum_moves += points[l[0]]
-            #         sum_outcomes += outcome_points[l[1]]
-            #     case "Z":
-            #         move_to_win = you_win[l[0]]
-            #         sum_moves += points(move_to_win)
-            #         sum_outcomes += outcome_points[l[1]]
-
             sum_outcomes += outcome_points[l[1]]
             if l[1] == "X":
                 move_to_lose = you_lose[l[0]]
@@ -89,9 +76,3 @@ def calculate_score_2(file):
         f.close()
 
     return sum_moves + sum_outcomes
-def main():
-    print(calculate_total_score("/Users/rashmisharma/Desktop/advent_of_code_22/day_2/test_2.txt"))
-    print(calculate_total_score("/Users/rashmisharma/Desktop/advent_of_code_22/day_2/input_2.txt"))
-    print(calculate_score_2("/Users/rashmisharma/Desktop/advent_of_code_22/day_2/test_2.txt"))
-    print(calculate_score_2("/Users/rashmisharma/Desktop/advent_of_code_22/day_2/input_2.txt"))
-main()

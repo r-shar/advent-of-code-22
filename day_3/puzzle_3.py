@@ -64,11 +64,3 @@ def calculate_priorites_group(file):
         f.close()
 
     return sum_priorities
-
-def main():
-    print(calculate_sum_priorites("/Users/rashmisharma/Desktop/advent_of_code_22/day_3/test_3.py"))
-    print(calculate_sum_priorites("/Users/rashmisharma/Desktop/advent_of_code_22/day_3/input_3.txt"))
-    print(calculate_priorites_group("/Users/rashmisharma/Desktop/advent_of_code_22/day_3/test_3.py"))
-    print(calculate_priorites_group("/Users/rashmisharma/Desktop/advent_of_code_22/day_3/input_3.txt"))
-
-main()

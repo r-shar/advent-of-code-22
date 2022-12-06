@@ -60,12 +60,3 @@ def find_top_three(file):
         top_three_sum += -(heapq.heappop(max_calories))
 
     return top_three_sum
-
-def main():
-    # max_calories = find_elf_with_max_calories("/Users/rashmisharma/Desktop/advent_of_code_22/input_1.txt")
-    # print(max_calories)
-
-    top_three_calories = find_top_three("/Users/rashmisharma/Desktop/advent_of_code_22/input_1.txt")
-    print(top_three_calories)
-
-main()

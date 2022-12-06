@@ -31,8 +31,3 @@ def count_overlap_2(file):
     num_overlaps += sum(a <= d and  b >= c for (a,b), (c,d) in lines)
 
     return num_overlaps
-def main():
-    print(count_overlap("/Users/rashmisharma/Desktop/advent_of_code_22/day_4/test_4.txt"))
-    print(count_overlap_2("/Users/rashmisharma/Desktop/advent_of_code_22/day_4/input_4.txt"))
-#
-main()
